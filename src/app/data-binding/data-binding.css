@@ -1,0 +1,12 @@
+.s1 {
+    background-color: aquamarine;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.s2 {
+    background-color: beige;
+    border: 1px dashed red;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}

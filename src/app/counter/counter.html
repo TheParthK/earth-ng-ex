@@ -1,0 +1,20 @@
+<p>counter works!</p>
+<hr>
+<button (click)="handler(true)">
+    Counter ++
+</button>
+<br>
+<button (click)="handler(false)">Counter --</button>
+<br><br>
+Counter: {{counter}}
+
+
+<br><br>
+<button id="i" (click)="commonHandler($event)">($event)Counter++</button>
+<button id="d" (click)="commonHandler($event)">($event)Counter--</button>
+
+<br><br>
+<input type="number" placeholder=" Enter Counter Value" id="customCounterValue" (input)="textHandler($event)">
+
+
+<!-- property binding -> attribute of the HTML element -->
