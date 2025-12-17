@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-data-binding',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './data-binding.html',
   styleUrl: './data-binding.css',
 })
@@ -36,6 +37,13 @@ export class DataBinding {
     this.userMarks = parseInt((e.target as HTMLInputElement).value);
     this.perc = this.userMarks / this.outOfTotal * 100
   }
+
+  name: string = "2 way data binding";
+
+  changeToUpperCase() {
+    this.name = this.name.toUpperCase();
+  }
+
 
 
 

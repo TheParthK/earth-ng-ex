@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { Counter } from './counter/counter';
 import { DataBinding } from './data-binding/data-binding';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Counter, DataBinding],
+  imports: [RouterOutlet, Counter, DataBinding, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

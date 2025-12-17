@@ -18,7 +18,8 @@ if [] is there like disabled="true" <br>
 
 
 
-<p [className]="cName" (click)="changeCName()" style="user-select: none;">Lorem ipsum dolor sit amet, consectetur
+<p [className]="cName" (click)="changeCName()" style="user-select: none;">(Click Me!) Lorem ipsum dolor sit amet,
+    consectetur
     adipisicing elit. Dolorem dolorum
     magnam reprehenderit
     quod
@@ -42,4 +43,22 @@ user enters acquired marks, then dropdown list of total marks (25, 50, 75, 100) 
     <option value="100">100</option>
 </select>
 <p [style.color]="perc<35?'red':'green'">Result:{{perc<35?"FAILED":"PASSED"}} </p>
+        <br><br>
+        <hr>
+        2 way data binding -> angular directive
+        <br>
+        angular f/w manages the components <br>
+        a. create the object of the component <br>
+        b. call the constructor <br>
+        c. inject the dependencies <br>
+        d. invoke life cycle callbacks <br>
+        e. invoke event callbacks <br>
+        f. resolve custom tags <br>
+
+        include forms module in the component that uses ngModel
+        <br> <br>
+        <input type="text" placeholder="trying ngModel - enter name" [(ngModel)]="name">
+        <p>{{name}}</p>
+        <button (click)="changeToUpperCase()">Change Name to Upper Case</button>
+
         <br><br><br><br><br><br><br><br><br><br><br>
