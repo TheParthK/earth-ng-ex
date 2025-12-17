@@ -1,9 +1,12 @@
+import { NgIf, NgForOf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Title } from "../title/title";
 
 @Component({
   selector: 'app-data-binding',
-  imports: [FormsModule],
+  imports: [FormsModule, NgIf, NgForOf, Title],
+  standalone: true,
   templateUrl: './data-binding.html',
   styleUrl: './data-binding.css',
 })
@@ -44,7 +47,12 @@ export class DataBinding {
     this.name = this.name.toUpperCase();
   }
 
+  hiddenDesc: boolean = true;
+  showHideDesc(e: Event) {
+    (e.target as HTMLInputElement).checked ? this.hiddenDesc = false : this.hiddenDesc = true;
+  }
 
+  studentNames: string[] = ["Parth", "Ayush", "Arnav", "Gurpreet", "Shreyansh", "Aakash"]
 
 
 }

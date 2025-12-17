@@ -1,6 +1,10 @@
 <hr>
 
 <p>data-binding works!</p>
+<hr>
+<app-title displayHeading="Welcome to Data-Binding 📎"
+    displaySubheading="We're gonna understand DataBinding in Angular"></app-title>
+<hr>
 
 one way data binding from model to view -> property binding
 
@@ -61,4 +65,51 @@ user enters acquired marks, then dropdown list of total marks (25, 50, 75, 100) 
         <p>{{name}}</p>
         <button (click)="changeToUpperCase()">Change Name to Upper Case</button>
 
+        <br>
+        <hr>
+        structural directive -> *ngIF, *ngFor *ngSwitch
+        <br> they modify structure of the View
+        <br>show checkbox - > description w/ image is present in the p tag
+        when checkbox checked, show description else hide
+        <br> <br>
+        <input type="checkbox" name="" id="" (input)="showHideDesc($event)"> &lt;- Show Description
+
+        <p *ngIf="!hiddenDesc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis est, voluptatem
+            facere
+            beatae doloremque
+            sit assumenda hic at tempore laboriosam, rem amet. Blanditiis quaerat ipsa temporibus officiis ducimus!
+            Impedit, aut? Here's a cool bike -<br>
+            <img src="https://lh3.googleusercontent.com/proxy/fanb5O1Lkep3FBqeZ2LG0U49EWxFns9dKHufexDFO8eMS34hlZxZNlJdKkN38YDQcIe6cPZmnV93z6SEp1Wgv0nyw4l7AfLEDe0"
+                width="162" height="108" alt="MV Agusta Superveloce">
+        </p>
+
+        <br>
+        <input type="checkbox" name="" id="" #cb2 (change)="1">
+        <p *ngIf="cb2.checked">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quisquam
+            necessitatibus voluptate minus, in sed, autem consequuntur aliquam eligendi, ut doloribus dolorum? Suscipit
+            sint odio eligendi nostrum, consequuntur magnam non.</p>
+
+        <br><br>
+        <hr>
+        *ngFor
+        <br> <br>
+        <select name="" id="">
+            <option value="" *ngFor="let name of studentNames">{{name}}</option>
+        </select>
+        <br><br>
+        <ol>
+            <li *ngFor="let n of studentNames">{{n}}</li>
+        </ol>
+        <br>
+        communicating from 1 component to another <br>
+        communication b/w components
+
+        IMP to develop reusable components
+
+        <br> attribute of a tag
+
+        type - &gt; tag
+        text - &gt; attribute
+
+        &lt;app-counter initial="10" step="5"&gt; &lt;/app-counter&gt;
         <br><br><br><br><br><br><br><br><br><br><br>

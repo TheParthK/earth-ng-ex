@@ -1,19 +1,22 @@
-<div>
-  <h1>HOME PAGE</h1>
+<div style="padding: 10px;">
+  <!-- <h1>HOME PAGE</h1>
 
-  <p>Welcome {{userName}}!</p>
+  <p>Welcome {{userName}}!</p> -->
+  <app-title displayHeading="Welcome Home 🏠🔢🔗"
+    displaySubheading="Hey {{userName}}, choose from Counter or Data-Binding" displayMessage=""
+    displayButtonMsg=""></app-title>
   <!-- <p>Reversed Name: {{reverseUsername()}}!</p>
   <button (click)="handler()">Click Me!</button>
   <button (click)="incCounter()">Counter</button>
   <app-counter></app-counter>
   <app-data-binding></app-data-binding> -->
-  <nav>
-    <!-- <a routerLink="/">Home</a> -->
+  <nav style="display: flex; gap: 20px;">
+    <a routerLink="/">Home</a>
     <a routerLink="/counter">Counter</a>
     <a routerLink="/data-binding">DataBinding</a>
   </nav>
   <h3>Component View - </h3>
-  <div style="border: 1px solid grey; padding: 10px;">
+  <div style="border: 1px solid grey; padding: 10px; border-radius: 10px;">
     <router-outlet></router-outlet>
   </div>
 </div>

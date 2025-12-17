@@ -1,0 +1,13 @@
+<div class="jumbotron text-left">
+    <h1 class="display-4">{{displayHeading}}</h1>
+    <p class="lead">
+        {{displaySubheading}}
+    </p>
+    <hr class="my-4">
+    <p *ngIf="displayMessage">
+        {{displayMessage}}
+    </p>
+    <a class="btn btn-primary btn-lg" href="#" role="button" *ngIf="displayButtonMsg">
+        {{displayButtonMsg}}
+    </a>
+</div>
